@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = {"rust",
-    "go",
+    -- "go",
     "v",
     "zig",
     "c",
@@ -76,6 +76,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
             local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
             client.server_capabilities.completionProvider.triggerCharacters = chars
             vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+            vim.lsp.document_color.enable(true, 0, { style = 'background' })
         end
     end,
 })

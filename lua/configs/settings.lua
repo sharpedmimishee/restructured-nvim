@@ -17,6 +17,7 @@ opt.cursorcolumn = false
 -- opt.background
 opt.showmode = true
 opt.showcmd = true
+opt.cmdheight = 0
 opt.hlsearch = true
 opt.incsearch = true
 -- opt.backup = true
@@ -30,7 +31,7 @@ opt.spelllang = {"en_us", "cjk"}
 opt.laststatus = 0
 opt.clipboard:append({ "unnamedplus" })
 opt.termguicolors = true
-opt.shell = "brush"
+-- opt.shell = "brush"
 vim.notify = require("notify")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -41,3 +42,12 @@ opt.completeopt = {
   "menuone",
   "noinsert",
 }
+require('vim._extui').enable({
+     enable = true, -- Whether to enable or disable the UI.
+     msg = { -- Options related to the message module.
+       ---@type 'cmd'|'msg' Where to place regular messages, either in the
+       ---cmdline or in a separate ephemeral message window.
+       target = 'cmd',
+       timeout = 4000, -- Time a message is visible in the message window.
+     },
+    })
