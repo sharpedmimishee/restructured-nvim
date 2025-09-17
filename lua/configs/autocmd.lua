@@ -1,13 +1,16 @@
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = {"rust",
-    -- "go",
+    "go",
+    "gomod",
+    "gosum",
+    "rust",
     "v",
     "zig",
     "c",
     "cpp",
-    "typescript",
-    "vim-doc",
+    "vimdoc",
     "vim",
+    "lua",
     "markdown"},
   callback = function()
     -- syntax highlighting, provided by Neovim
