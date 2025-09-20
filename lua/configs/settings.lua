@@ -32,7 +32,6 @@ opt.laststatus = 0
 opt.clipboard:append({ "unnamedplus" })
 opt.termguicolors = true
 -- opt.shell = "brush"
-vim.notify = require("notify")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
