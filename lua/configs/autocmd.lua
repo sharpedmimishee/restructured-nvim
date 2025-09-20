@@ -43,7 +43,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 vim.api.nvim_create_autocmd("FileType", {
     desc = "launch rust-analyzer",
-    pattern = "rs",
+    pattern = "rust",
     callback = function()
         vim.lsp.start({
             name = "rust-analyzer",

@@ -40,7 +40,7 @@ opt.completeopt = {
   "fuzzy",
   "popup",
   "menuone",
-  "noinsert",
+  -- "noinsert",
   "noselect"
 }
 require('vim._extui').enable({
