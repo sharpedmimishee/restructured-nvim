@@ -1,3 +1,5 @@
+vim.loader.enable()
+
 vim.pack.add({
     "https://github.com/monaqa/dial.nvim",
     "https://github.com/nvim-tree/nvim-web-devicons",
@@ -17,18 +19,22 @@ vim.pack.add({
     "https://github.com/vyfor/cord.nvim",
     "https://github.com/echasnovski/mini.pairs",
     "https://github.com/gelguy/wilder.nvim",
+    "https://github.com/dstein64/vim-startuptime"
 })
 --configs
-require("configs.ccc")
-require("configs.oil")
 require("configs.lualine")
 require("configs.keymaps")
 require("configs.settings")
 require("configs.treesitter")
 require("configs.autocmd")
+require("configs.dial")
 require("gitsigns").setup()
-require("lensline").setup()
 --setups
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        require("configs.oil")
+    end
+})
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function()
         require("fidget").setup()
@@ -40,6 +46,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
         require("mini.splitjoin").setup()
         require("mini.surround").setup()
         require("mini.cursorword").setup()
+        require("lensline").setup()
     end
 })
 vim.api.nvim_create_autocmd("InsertEnter", {
@@ -49,6 +56,7 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 })
 vim.api.nvim_create_autocmd("CmdLineEnter", {
     callback = function()
+        require("configs.ccc")
         require("configs.wilder")
     end
 })

@@ -1,0 +1,32 @@
+{
+  "plugins": {
+    "bufferline.nvim": [],
+    "ccc.nvim": [],
+    "cord.nvim": [],
+    "dial.nvim": [],
+    "fidget.nvim": [],
+    "floatization.nvim": [],
+    "gitsigns.nvim": [],
+    "lensline.nvim": [],
+    "lualine.nvim": [],
+    "luanium.nvim": [],
+    "mini.cursorword": [],
+    "mini.pairs": [],
+    "mini.splitjoin": [],
+    "mini.surround": {
+      "rev": "444e155"
+    },
+    "nvim-treesitter": {
+      "rev": "3ab4f2d2",
+      "version": "'main'"
+    },
+    "nvim-treesitter-context": [],
+    "nvim-web-devicons": [],
+    "oil.nvim": [],
+    "vim-startuptime": [],
+    "which-key.nvim": {
+      "rev": "b4177e3"
+    },
+    "wilder.nvim": []
+  }
+}
