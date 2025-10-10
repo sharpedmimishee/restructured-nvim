@@ -9,6 +9,8 @@ wk.add({
     {"<leader>xc", desc = "Open floating window", function() vim.lsp.buf.hover() end },
     {"<leader>xz", desc = "Open signature help", function() vim.lsp.buf.signature_help() end },
 })
+vim.keymap.set("n", "<C-j>", "<Cmd>bprev<CR>", { desc="Change to previous buffer" })
+vim.keymap.set("n", "<C-k>", "<Cmd>bnext<CR>", { desc="Change to next buffer" })
 vim.keymap.set("n", "<C-a>", function()
     require("dial.map").manipulate("increment", "normal")
 end)
