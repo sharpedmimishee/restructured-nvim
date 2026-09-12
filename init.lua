@@ -1,4 +1,4 @@
--- Disable unneccessary built-in plugins
+-- Disable unnecessary built-in plugins
 local disabled_built_ins = {
   "netrw",
   "netrwPlugin",
